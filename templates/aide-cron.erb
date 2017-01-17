@@ -3,7 +3,7 @@
 renice +19 -p $$ &>/dev/null
 ionice -c3 -p $$ &>/dev/null
 
-<%= @aide::params::aide_path %> --check
+<%= scope['aide::params::aide_path'] %> --check
 
 exit 0
 
